@@ -43,12 +43,12 @@ def main():
 
         # Top N trips by DEFINE YOUR QUERY
         cur.execute("""
-            SELECT city, minutes, fare
+            SELECT id, city, minutes, fare
             FROM trips
             ORDER BY minutes DESC
             LIMIT %s;
         """, (TOP_N,))
-        top = [{"city": c, "minutes": m, "fare": float(f)} for (c, m, f) in cur.fetchall()]
+        top = [{"id": id, "city": c, "minutes": m, "fare": float(f)} for (id, c, m, f) in cur.fetchall()]
 
     summary = {
         "total_trips": int(total_trips),
