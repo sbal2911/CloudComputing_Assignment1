@@ -24,17 +24,27 @@ If the included Makefile is used for execution, convenient shortcuts can be usef
 
 ``` make clean ``` → remove containers, volumes, and regenerate an empty out directory
 
-### 4. **To build and run the full stack using Docker Compose command**
+### 4. **Stopping the containers gracefully**
+
+For stopping the containers and exiting from the current execution, please press 
+
+```bash
+ctrl+C
+```
+
+on the terminal
+
+### 5. **To build and run the full stack using Docker Compose command**
 
 ```bash
 docker compose up --build
 ```
-### 5. **To stop the containers and keep data volumes**
+### 6. **To stop the containers and keep data volumes**
 
 ```bash
 docker compose down
 ```
-### 6. **To stop and also remove volumes and output files (fresh run)**
+### 7. **To stop and also remove volumes and output files (fresh run)**
 
 ```bash
 docker compose down -v
@@ -110,11 +120,8 @@ Output:
 
 1. The Python app writes its final JSON file to the container path ``` /out/summary.json ```.
 
-2. Through a volume mount, this file is available on the host at:
+2. Outputs are also printed on the terminal in JSON format, as well as in Containers too.
 
-```bash
-./out/summary.json
-```
 This directory is stored between container runs unless explicitly deleted.
 
 ## Troubleshooting
