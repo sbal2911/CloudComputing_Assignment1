@@ -11,10 +11,8 @@ This assignment leverages a dual-service cloud stack with Docker Compose. A star
 ### 2. **To build and run the full stack using run.sh file**
 
 ```bash
-bash ./run.sh
+./run.sh
 ```
-
-Note: Please use the exact command for MacOS systems.
 
 ### 3. **In case of Makefile**
 
